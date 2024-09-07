@@ -9,10 +9,15 @@
 @section('content')
 
 
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
 <div class="container mt-5">
     <h2>Add New Admin</h2>
-    <form action="" method="POST">
+    <form action="{{ route('user_store') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="admin_f_name" class="form-label">First Name</label>

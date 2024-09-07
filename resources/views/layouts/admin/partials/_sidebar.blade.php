@@ -223,6 +223,13 @@
                                         <span class="text-truncate">{{\App\CPU\translate('add_new_account')}}</span>
                                     </a>
                                 </li>
+                                <li class="nav-item {{Request::is('admin/account/add')?'active':''}}">
+                                    <a class="nav-link " href="{{route('user')}}"
+                                       title="{{\App\CPU\translate('admin')}}">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('admin')}}</span>
+                                    </a>
+                                </li>
 
                                 <li class="nav-item {{Request::is('admin/account/list')?'active':''}}">
                                     <a class="nav-link " href="{{route('admin.account.list')}}"

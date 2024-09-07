@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('admin/create_user',[UserController::class,'index']) -> name('user'); 
+Route::post('admin/create_user',[UserController::class,'store']) -> name('user_store'); 
 
 
 Route::fallback(function(){
