@@ -13,7 +13,7 @@
                     <a class="navbar-brand" href="{{route('admin.dashboard')}}" aria-label="Front">
                         <img class="navbar-brand-logo"
                              onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'"
-                             src="{{asset('storage/app/public/shop')}}/{{ $shop_logo }}"
+                             src="{{asset('storage/shop/'. $shop_logo) }}"
                              alt="{{\App\CPU\translate('logo')}}">
                     </a>
                     <!-- End Logo -->

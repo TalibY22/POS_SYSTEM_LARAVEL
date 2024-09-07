@@ -90,7 +90,7 @@
                                     </td>
                                     <td>
                                             <img class="img-one-plst"
-                                                src="{{asset('storage/app/public/product')}}/{{$product['image']}}"
+                                                src="{{ asset('storage/product/'.$product['image']) }}"
                                                 onerror="this.src='{{asset('assets/admin/img/160x160/img2.jpg')}}'">
                                     </td>
                                     <td>
