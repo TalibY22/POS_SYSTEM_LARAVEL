@@ -4,7 +4,7 @@
     top: 3px;
     inset-inline-end: 3px;
     inset-inline-start: 3px;
-    background: #161853;
+    background: #121213;
 }
 .hs-unfold-content{
     width: 16rem;
@@ -71,7 +71,7 @@ body{
 }
 
 .navbar .active > .nav-link, .navbar .nav-link.active, .navbar .nav-link.show, .navbar .show > .nav-link {
-    color: #6125ec;
+    color: #ec2525;
 }
 
 .navbar-vertical .active .nav-indicator-icon, .navbar-vertical .nav-link:hover .nav-indicator-icon, .navbar-vertical .show > .nav-link > .nav-indicator-icon {
@@ -91,7 +91,7 @@ body{
 }
 
 .nav-sub {
-    background-color: #161853 !important;
+    background-color: #030303 !important;
 }
 
 .aside-back{

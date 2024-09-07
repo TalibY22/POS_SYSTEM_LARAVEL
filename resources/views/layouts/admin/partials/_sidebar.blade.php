@@ -26,7 +26,7 @@
                     </button>
                     <!-- End Navbar Vertical Toggle -->
                 </div>
-
+                <i class="fa-thin fa-house"></i>
                 <!-- Content -->
                 <div class="navbar-vertical-content">
                     <ul class="navbar-nav navbar-nav-lg nav-tabs">
@@ -39,7 +39,7 @@
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin')?'show':''}}">
                             <a class="js-navbar-vertical-aside-menu-link nav-link"
                                href="{{route('admin.dashboard')}}" title="{{\App\CPU\translate('dashboards')}}">
-                               <i class="bi bi-house"></i>
+                               <i class="fa-thin fa-house"></i>
                                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
                                     {{\App\CPU\translate('dashboard')}}
                                 </span>
