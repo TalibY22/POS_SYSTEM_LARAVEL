@@ -1,12 +1,4 @@
-@extends('layouts.admin.app')
-
-@section('title',\App\CPU\translate('update_account'))
-
-@push('css_or_js')
-
-@endpush
-
-@section('content')
+@c
 <div class="content container-fluid">
         <!-- Page Header -->
         <div class="mb-3">
