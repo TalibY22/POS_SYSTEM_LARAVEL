@@ -3,6 +3,8 @@
       background-color: #ffffff;
   }
 </style>
+
+
 <div id="sidebarMain" class="d-none">
     <aside class="aside-back js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered  ">
         <div class="navbar-vertical-container text-capitalize">
@@ -37,7 +39,7 @@
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin')?'show':''}}">
                             <a class="js-navbar-vertical-aside-menu-link nav-link"
                                href="{{route('admin.dashboard')}}" title="{{\App\CPU\translate('dashboards')}}">
-                                <i class="tio-home-vs-1-outlined nav-icon"></i>
+                               <i class="bi bi-house"></i>
                                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
                                     {{\App\CPU\translate('dashboard')}}
                                 </span>
@@ -383,6 +385,9 @@
         </div>
     </aside>
 </div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 
