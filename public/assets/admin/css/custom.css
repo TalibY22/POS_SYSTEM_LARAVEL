@@ -71,7 +71,7 @@ body{
 }
 
 .navbar .active > .nav-link, .navbar .nav-link.active, .navbar .nav-link.show, .navbar .show > .nav-link {
-    color: #EC255A;
+    color: #6125ec;
 }
 
 .navbar-vertical .active .nav-indicator-icon, .navbar-vertical .nav-link:hover .nav-indicator-icon, .navbar-vertical .show > .nav-link > .nav-indicator-icon {
@@ -87,7 +87,7 @@ body{
 }
 
 .side-logo {
-    background-color: #F7F8FA;
+    background-color: #0a0a0a;
 }
 
 .nav-sub {
@@ -95,11 +95,11 @@ body{
 }
 
 .aside-back{
-    background: #161853!important;
+    background: #080808!important;
 }
 
 .nav-brand-back{
-    background: #F7F7F7!important
+    background: #0a0a0a!important
 }
 
 /*blank*/
@@ -299,22 +299,22 @@ input:checked + .slider:before {
 }
 
 .color-one{
-    background: #EC255A
+    background: #04e6b5
 }
 .font-one{
     font-size: 15px;
 }
 .color-two{
-    background: #292C6D
+    background: #20b4f8
 }
 .color-three{
-    background:#9A0680
+    background:#e60404
 }
 .color-four{
     background: #082032
 }
 .color-five{
-    background: #334756
+    background: #e9ff1f
 }
 
 /*invoice*/
