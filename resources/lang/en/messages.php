@@ -586,4 +586,9 @@
   'View All' => 'View All',
   'Category already exists!' => 'Category already exists!',
   'Sub_category already exists!' => 'Sub category already exists!',
+  'sells' => 'Sells',
+  'Units' => 'Units',
+  'Stock alert' => 'Stock alert',
+  'Accounts' => 'Accounts',
+  'customers and suppliers' => 'Customers and suppliers',
 );

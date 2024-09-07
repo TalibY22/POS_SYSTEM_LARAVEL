@@ -31,7 +31,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #161853;
+    background: #080808;
 }
 .flex-inline {
     display: flex;
@@ -681,7 +681,7 @@ body > .width-inone {
 }
 
 .direction-toggle {
-  background: #161853;
+  background:#121213;
   color: #ffffff;
   padding: 8px 0;
   -webkit-padding-end: 18px;

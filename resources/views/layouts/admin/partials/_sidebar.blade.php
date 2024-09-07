@@ -41,50 +41,16 @@
                                href="{{route('admin.dashboard')}}" title="{{\App\CPU\translate('dashboards')}}">
                                <i class="fa-thin fa-house"></i>
                                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
-                                    {{\App\CPU\translate('dashboard')}}
+                                    {{\App\CPU\translate('home')}}
                                 </span>
                             </a>
                         </li>
                         <!-- End Dashboards -->
-                        <li class="nav-item">
-                            <small
-                                class="nav-subtitle">{{\App\CPU\translate('pos_section')}}</small>
-                            <small class="tio-more-horizontal nav-subtitle-replacer"></small>
-                        </li>
-                        <!-- Pos Pages -->
-                        @php($orders = \App\Models\Order::get()->count())
-                        <li class="navbar-vertical-aside-has-menu {{Request::is('admin/pos*')?'active':''}}">
-                            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:"
-                            >
-                                <i class="tio-shopping nav-icon"></i>
-                                <span
-                                    class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{\App\CPU\translate('POS')}}</span>
-                            </a>
-                            <ul class="js-navbar-vertical-aside-submenu nav nav-sub {{Request::is('admin/pos*')?'d-block':''}}">
-                                <li class="nav-item {{Request::is('admin/pos/')?'active':''}}">
-                                    <a class="nav-link " href="{{route('admin.pos.index')}}"
-                                       title="{{\App\CPU\translate('POS')}}" target="_blank">
-                                        <span class="tio-circle nav-indicator-icon"></span>
-                                        <span class="text-truncate">{{\App\CPU\translate('pos')}}</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item {{Request::is('admin/pos/orders')?'active':''}}">
-                                    <a class="nav-link " href="{{route('admin.pos.orders')}}"
-                                       title="{{\App\CPU\translate('orders')}}">
-                                        <span class="tio-circle nav-indicator-icon"></span>
-                                        <span class="text-truncate">{{\App\CPU\translate('orders')}}
-                                            <span class="badge badge-success ml-2">{{ $orders }} </span>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
+                      
                         <!-- Pos End Pages -->
                         <li class="nav-item">
                             <small
-                                class="nav-subtitle">{{\App\CPU\translate('product_section')}}</small>
+                                class="nav-subtitle">{{\App\CPU\translate('products')}}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
                         <!-- category Pages -->
@@ -104,6 +70,14 @@
                                         <span class="text-truncate">{{\App\CPU\translate('category')}}</span>
                                     </a>
                                 </li>
+                                
+                                <li class="nav-item {{Request::is('admin/category/add')?'active':''}}">
+                                    <a class="nav-link " href="{{route('admin.brand.add')}}"
+                                       title="{{\App\CPU\translate('add_new_category')}}">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('brand')}}</span>
+                                    </a>
+                                </li>
 
                                 <li class="nav-item {{Request::is('admin/category/add-sub-category')?'active':''}}">
                                     <a class="nav-link " href="{{route('admin.category.add-sub-category')}}"
@@ -117,28 +91,9 @@
 
                         <!-- category End Pages -->
                         <!-- Brand -->
-                        <li class="navbar-vertical-aside-has-menu {{Request::is('admin/brand*')?'active':''}}">
-                            <a class="js-navbar-vertical-aside-menu-link nav-link"
-                               href="{{route('admin.brand.add')}}"
-                            >
-                                <i class="tio-star nav-icon"></i>
-                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
-                                    {{\App\CPU\translate('brand')}}
-                                </span>
-                            </a>
-                        </li>
+                        
                         <!--Brand end -->
-                        <!-- unit -->
-                        <li class="navbar-vertical-aside-has-menu {{Request::is('admin/unit*')?'active':''}}">
-                            <a class="js-navbar-vertical-aside-menu-link nav-link"
-                               href="{{route('admin.unit.index')}}"
-                            >
-                                <i class="tio-calculator nav-icon"></i>
-                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
-                                    {{\App\CPU\translate('unit')}}
-                                </span>
-                            </a>
-                        </li>
+                  
                         <!--unit end -->
 
                         <!-- Product Pages -->
@@ -166,6 +121,22 @@
                                         <span class="text-truncate">{{\App\CPU\translate('list')}}</span>
                                     </a>
                                 </li>
+
+                                <li class="nav-item {{Request::is('admin/product/add')?'active':''}}">
+                                    <a class="nav-link " href=" {{route('admin.stock.stock-limit')}}"
+                                       title="{{\App\CPU\translate('add_new_product')}}">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('Stock alert')}}</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item {{Request::is('admin/product/add')?'active':''}}">
+                                    <a class="nav-link " href="  {{route('admin.unit.index')}}"
+                                       title="{{\App\CPU\translate('add_new_product')}}">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('Units')}}</span>
+                                    </a>
+                                </li>
+
                                 <li class="nav-item {{Request::is('admin/product/bulk-import')?'active':''}}">
                                     <a class="nav-link " href="{{route('admin.product.bulk-import')}}"
                                        title="{{\App\CPU\translate('bulk_import')}}">
@@ -183,30 +154,15 @@
                             </ul>
                         </li>
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin/stock*')?'active':''}}">
-                            <a class="js-navbar-vertical-aside-menu-link nav-link"
-                               href="{{route('admin.stock.stock-limit')}}"
-                            >
-                                <i class="tio-warning nav-icon"></i>
-                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
-                                    {{\App\CPU\translate('stock_limit_products')}}
-                                </span>
-                            </a>
-                        </li>
+                        
                         <!-- Product End Pages -->
                         <li class="nav-item">
                             <small
-                                class="nav-subtitle">{{\App\CPU\translate('business_section')}}</small>
+                                class="nav-subtitle">{{\App\CPU\translate('Accounts')}}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
                         <!-- Coupon End Pages -->
-                        <li class="navbar-vertical-aside-has-menu {{Request::is('admin/coupon*')?'active':''}}">
-                            <a class="js-navbar-vertical-aside-menu-link nav-link"
-                               href="{{route('admin.coupon.add-new')}}">
-                                <i class="tio-gift nav-icon"></i>
-                                <span
-                                    class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{\App\CPU\translate('coupons')}}</span>
-                            </a>
-                        </li>
+                       
                         <!-- Coupon End Pages -->
 
                         <!-- Account start pages -->
@@ -285,13 +241,61 @@
 
                             </ul>
                         </li>
+
                         <!-- Account End pages -->
+
+
                         <li class="nav-item">
                             <small
-                                class="nav-subtitle">{{\App\CPU\translate('customer_section')}}</small>
+                                class="nav-subtitle">{{\App\CPU\translate('pos_section')}}</small>
+                            <small class="tio-more-horizontal nav-subtitle-replacer"></small>
+                        </li>
+                        <!-- Pos Pages -->
+                        @php($orders = \App\Models\Order::get()->count())
+                        <li class="navbar-vertical-aside-has-menu {{Request::is('admin/pos*')?'active':''}}">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:"
+                            >
+                                <i class="tio-shopping nav-icon"></i>
+                                <span
+                                    class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{\App\CPU\translate('POS')}}</span>
+                            </a>
+                            <ul class="js-navbar-vertical-aside-submenu nav nav-sub {{Request::is('admin/pos*')?'d-block':''}}">
+                                <li class="nav-item {{Request::is('admin/pos/')?'active':''}}">
+                                    <a class="nav-link " href="{{route('admin.pos.index')}}"
+                                       title="{{\App\CPU\translate('POS')}}" target="_blank">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('pos')}}</span>
+                                    </a>
+                                </li>
+                                
+
+                                <li class="nav-item {{Request::is('admin/pos/orders')?'active':''}}">
+                                    <a class="nav-link " href="{{route('admin.pos.orders')}}"
+                                       title="{{\App\CPU\translate('orders')}}">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('sells')}}
+                                            <span class="badge badge-success ml-2">{{ $orders }} </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item {{Request::is('admin/pos/')?'active':''}}">
+                                    <a class="nav-link " href="{{route('admin.coupon.add-new')}}"
+                                       title="{{\App\CPU\translate('POS')}}" target="_blank">
+                                        <span class="tio-circle nav-indicator-icon"></span>
+                                        <span class="text-truncate">{{\App\CPU\translate('coupons')}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <small
+                                class="nav-subtitle">{{\App\CPU\translate('customers and suppliers')}}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
                         <!-- Customer Pages -->
+                        
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin/customer*')?'active':''}}">
                             <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:"
                             >
@@ -317,13 +321,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- Customer end Pages -->
-                        <li class="nav-item">
-                            <small
-                                class="nav-subtitle">{{\App\CPU\translate('supplier_section')}}</small>
-                            <small class="tio-more-horizontal nav-subtitle-replacer"></small>
-                        </li>
-                        <!-- Supplier Pages -->
+
+
+
                         <li class="navbar-vertical-aside-has-menu {{Request::is('admin/supplier*')?'active':''}}">
                             <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:"
                             >
@@ -349,10 +349,12 @@
                                 </li>
                             </ul>
                         </li>
+                        <!-- Customer end Pages -->
+                        
                         <!-- Supplier end Pages -->
                         <li class="nav-item">
                             <small
-                                class="nav-subtitle">{{\App\CPU\translate('shop_setting_section')}}</small>
+                                class="nav-subtitle">{{\App\CPU\translate('settings')}}</small>
                             <small class="tio-more-horizontal nav-subtitle-replacer"></small>
                         </li>
                         <!-- Settings Start Pages -->
