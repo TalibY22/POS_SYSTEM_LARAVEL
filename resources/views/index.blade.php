@@ -12,7 +12,7 @@
 
 <div class="container mt-5">
     <h2>Add New Admin</h2>
-    <form action="{{ route('admin.store') }}" method="POST">
+    <form action="" method="POST">
         @csrf
         <div class="mb-3">
             <label for="admin_f_name" class="form-label">First Name</label>

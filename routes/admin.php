@@ -2,6 +2,9 @@
 
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
+
 
 Route::group(['namespace'=>'Admin', 'as' => 'admin.', 'prefix'=>'admin'] ,function(){
     Route::group(['namespace' => 'Auth', 'prefix' => 'auth', 'as' => 'auth.'], function(){
@@ -10,6 +13,7 @@ Route::group(['namespace'=>'Admin', 'as' => 'admin.', 'prefix'=>'admin'] ,functi
         Route::get('logout', 'LoginController@logout')->name('logout');
     });
 
+   
     Route::group(['middleware' => ['admin']], function(){
         Route::get('/', 'DashboardController@dashboard')->name('dashboard');
         Route::post('account-status','DashboardController@account_stats')->name('account-status');
@@ -97,6 +101,7 @@ Route::group(['namespace'=>'Admin', 'as' => 'admin.', 'prefix'=>'admin'] ,functi
 
         //account
         Route::group(['prefix' => 'account', 'as' => 'account.'], function () {
+           
             Route::get('add','AccountController@add')->name('add');
             Route::post('store', 'AccountController@store')->name('store');
             Route::get('list', 'AccountController@list')->name('list');

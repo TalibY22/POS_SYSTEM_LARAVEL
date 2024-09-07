@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('admin/create_user',[UserController::class,'index']) -> name('user'); 
+
+
 Route::fallback(function(){
     return redirect('admin/auth/login');
 });
+
+
+
 
 Route::get('authentication-failed', function () {
     $errors = [];
