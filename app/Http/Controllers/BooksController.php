@@ -76,7 +76,7 @@ class BooksController extends Controller
         $url = "{$apidomain}/books/v3/contacts";
 
         $itemData = [
-            'contact_name' => $requestData->name,
+            'contact_name' => $requestData['name'] ?? null,
            
 
         ];
