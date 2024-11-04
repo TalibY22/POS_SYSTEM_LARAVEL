@@ -12,7 +12,10 @@ use App\Models\Customer;
 use App\Models\Order;
 use Brian2694\Toastr\Facades\Toastr;
 use App\CPU\Helpers;
+use App\Http\Controllers\BooksController;
 use App\Models\Account;
+use Illuminate\Support\Facades\Log;
+
 use App\Models\Transection;
 use function App\CPU\translate;
 
@@ -50,6 +53,12 @@ class CustomerController extends Controller
             $image_name = 'def.png';
         }
 
+        $requestData = $request -> all();
+        $authController = new BooksController();
+        $refreshResult = $authController->post_customers($requestData);
+        if ($refreshResult !== true) {
+            Log::info('Refresh Result:', ['result' => $refreshResult]);
+        }
         $customer = $this->customer;
         $customer->name = $request->name;
         $customer->mobile = $request->mobile;
